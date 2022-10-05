@@ -7,22 +7,29 @@ Metodos:
     getFuerza() --> Devuelve la fuerza
 La raza no se puede cambiar desde fuera de la clase
 */
-
+(() => {
 class personaje
 {
-    constructor(public Nombre:string, private raza:string, public fuerza:string)
+    constructor(public Nombre:string, private raza:string, public fuerza:number,public alias:string)
     {
         this.Nombre = Nombre;
         this.fuerza = fuerza;
         this.raza = raza;
+        this.alias = alias;
     }
     //!Metodos;
     getNombre():string
     {
         return this.Nombre;
     }
-    getFuerza():string
+    getFuerza():number
     {
         return this.fuerza;
     }
 }
+
+let rey:personaje = new personaje('Theoden','Rohirrim',20,'Domador de Caballos');
+
+
+
+})()
